@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<meta charset="utf8">
+<body>
+    <p>Enter Password: <input type="password" id="pass1"></p>
+    <p>Enter Again: <input type="password" id="pass2"></p>
+    <button onclick="validate()">Validate</button>
+</body>
+<script>
+    function validate() {
+        let pass1 = document.querySelector("#pass1").value;
+        let pass2 = document.querySelector("#pass2").value;
+
+        if(pass1 != pass2) window.alert("The password fields do not match!");
+        if(pass1.length < 8 || pass2.length < 8) window.alert("The password isn't long enough.");
+    }
+
+</script>
